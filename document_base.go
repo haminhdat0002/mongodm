@@ -49,6 +49,14 @@ func (self *DocumentBase) SetId(id bson.ObjectId) {
 	self.Id = id
 }
 
+func (self *DocumentBase) GetName() string {
+	return self.collection.Name
+}
+
+func (self *DocumentBase) SetName(name string) {
+	self.collection.Name = name
+}
+
 func (self *DocumentBase) GetCreatedAt() time.Time {
 	return self.CreatedAt
 }
