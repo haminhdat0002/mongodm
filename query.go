@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
+	"github.com/globalsign/mgo"
+	"github.com/globalsign/mgo/bson"
 )
 
 /*
@@ -63,7 +63,7 @@ func (self *Query) Skip(skip int) *Query {
 	return self
 }
 
-//see: http://godoc.org/gopkg.in/mgo.v2#Query.Count
+//see: http://godoc.org/github.com/globalsign/mgo#Query.Count
 func (self *Query) Count() (n int, err error) {
 
 	return self.collection.Find(self.query).Count()
